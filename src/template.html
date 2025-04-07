@@ -4,52 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Weather app</title>
 </head>
 <body>
     <div id="searchBar">
         <form>
-            <input type="text" name="location" id="location">
-            <button>Submit icon* </button>
+            <input type="text" name="location" id="location" placeholder="Any place here">
+            <select id="unit" name="unit">
+                <option value="metric">Metrics</option>
+                <option value="us">Freedom</option>
+            </select>
+
+            <button>
+                <img src="./icons/search.svg" alt="search">
+            </button>
         </form>
     </div>
     <div id = "weather-content">
         <div class="" id="main-info">
-            <div id = "info">
-                <div id = "city-name">
-                    City name
-                </div>
-                <img src="#" alt="" id = "current-icon">
-
-                <div id = "temp">
-                    14
-                </div>
-
-                <div id="condition">Cloudy</div>
+            <div id = "city-name">
+                City name
             </div>
+            <div class = "wrapper">
+                <div class = "icon-wrapper">
+                    <img src="#" alt="" id = "current-icon">
+                    <div id="condition">Cloudy</div>
+                    <div class = "max-min-temp">
+                        <div style="display: flex; align-items: center; gap: 4px">
+                            <img src="./icons/arrow-up.svg" alt="" style="height: 1rem;">
+                            <div id = "temp-max">16</div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 4px">
+                            <img src="./icons/arrow-down.svg" alt="" style="height: 1rem;">
+                            <div id = "temp-min">14</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class = "icon-wrapper">
+                    <div id = "temp"></div>
+                    <!-- <div id = "feelslike"></div> -->
+                </div>
+            </div>
+
         </div>
 
         <div id="misc">
-            <div id = "UV">UV</div>
-            <div id = "humidity">Humidity</div>
-            <div id = "sunrise"> sunrise</div>
-            <div id = "sunset"> sunset</div>
-            <div id = "pressure">Pressure</div>
-            <div id = "feelslike">Real feel</div>
-            <div id = "precipprob">Rain chance</div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 16px">
+                <div style="display: flex; align-items: center; gap: 16px">
+                    <img src="./icons/uv.svg" alt="">
+                    <div>UV index</div>
+                </div>
+                <div id = "UV" style="font-size: 2rem;">UV</div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 16px">
+                <div style="display: flex; align-items: center; gap: 16px">
+                    <img src="./icons/humid.svg" alt="">
+                    <div>Humidity</div>
+                </div>
+                <div id = "humidity" style="font-size: 2rem;">UV</div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 16px">
+                <div style="display: flex; align-items: center; gap: 16px">
+                    <img src="./icons/sunrise.svg" alt="">
+                    <div>Sunrise</div>
+                </div>
+                <div id = "sunrise" style="font-size: 2rem;">UV</div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 16px">
+                <div style="display: flex; align-items: center; gap: 16px">
+                    <img src="./icons/sunset.svg" alt="">
+                    <div>Sunset</div>
+                </div>
+                <div id = "sunset" style="font-size: 2rem;">UV</div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 16px">
+                <div style="display: flex; align-items: center; gap: 16px">
+                    <img src="./icons/windspeed.svg" alt="">
+                    <div>Windspeed</div>
+                </div>
+                <div id = "windspeed" style="font-size: 2rem;">UV</div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 16px">
+                <div style="display: flex; align-items: center; gap: 16px">
+                    <img src="./icons/rain-chance.svg" alt="">
+                    <div>Rain chance</div>
+                </div>
+                <div id = "precipprob" style="font-size: 2rem;">UV</div>
+            </div>
         </div>
 
-        <div id="5day-forecast">
-
-        </div>
-
-        <div id="1day-forecast">
-
-        </div>
-
-       
     </div>
+    <div>
+        24-hour forecast
+        <div id="day-forecast">
+        </div>
+    </div>
+    <div>
+        5-day forecast
+        <div id="five-day-forecast">
+        </div>
+    </div>
+
 </body>
 </html>

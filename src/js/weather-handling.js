@@ -63,4 +63,20 @@ export class weather {
     getCurrentTime() {
         return this.data.currentConditions.datetimeEpoch; 
     }
+
+    getTempMax() {
+        return this.data.days[0].tempmax;
+    }
+
+    getTempMin() {
+        return this.data.days[0].tempmin;
+    }
+
+    getRealFeel() {
+        return this.data.currentConditions.feelslike;
+    }
+
+    getWindspeed() {
+        return this.data.currentConditions.windspeed;
+    }
 }
