@@ -170,10 +170,15 @@ export class UI {
         button.addEventListener("click", async (e)=>{
             e.preventDefault();
 
-            await this.app.fetchData(input.value, select.value); 
-            // this.app.printData(input.value);
-            input.value = "";
-            this.render(); 
+            try {
+                await this.app.fetchData(input.value, select.value); 
+                // this.app.printData(input.value);
+                input.value = "";
+                this.render(); 
+            }
+            catch (err)  {
+                console.log(err);
+            }
         })
     }
 }
