@@ -21,5 +21,4 @@ npm run start
 
 ## Future Enhancements
 
-- **Backend Integration**: In the future, we plan to integrate a backend to handle user authentication, save preferences, and store historical weather data.
-- **Advanced Features**: We are considering adding features such as weather alerts, more detailed forecasting, and integration with other weather APIs.
+- **Backend Integration**: In the future, I plan to integrate a backend to handle user authentication, save preferences, and store historical weather data.
